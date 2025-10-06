@@ -1,0 +1,401 @@
+{
+  "intents": [
+    { "tag": "greeting", "patterns": ["hi", "hello", "hey", "good morning", "good afternoon", "good evening"], "responses": ["Hello! How can I help you with taxes today?", "Hi there — ask me any tax question."] },
+    { "tag": "goodbye", "patterns": ["bye", "goodbye", "see you later", "talk to you later"], "responses": ["Goodbye! Have a great day.", "See you later!"] },
+    { "tag": "thanks", "patterns": ["thanks", "thank you", "thx", "much appreciated"], "responses": ["You're welcome!", "Glad to help!"] },
+    { "tag": "about_bot", "patterns": ["who are you", "what can you do", "are you a bot"], "responses": ["I'm a tax assistant bot. I can answer income tax queries, calculate deductions, and guide you with forms."] },
+    { "tag": "tax_80C", "patterns": ["section 80C", "80C deduction", "investments under 80C", "what is 80C"], "responses": ["80C allows deduction up to ₹1.5 lakh for PPF, ELSS, life insurance, NSC, and tax-saving FDs."] },
+    { "tag": "tax_80D", "patterns": ["section 80D", "health insurance deduction", "80D benefits"], "responses": ["80D allows deduction for premiums paid for self, family, and parents' health insurance."] },
+    { "tag": "tax_80E", "patterns": ["section 80E", "education loan deduction"], "responses": ["80E allows deduction on interest paid on higher education loans."] },
+    { "tag": "tax_80G", "patterns": ["donation deduction", "section 80G", "charity tax benefit"], "responses": ["80G allows deduction for donations to specified charitable funds."] },
+    { "tag": "tax_80TTA", "patterns": ["80TTA", "savings account interest deduction"], "responses": ["80TTA allows deduction up to ₹10,000 on interest earned from savings account."] },
+    { "tag": "tax_80TTB", "patterns": ["80TTB", "senior citizen interest deduction"], "responses": ["80TTB allows senior citizens deduction up to ₹50,000 on interest from deposits."] },
+    { "tag": "tax_80CCD1B", "patterns": ["section 80CCD1B", "NPS contribution deduction"], "responses": ["Additional deduction up to ₹50,000 for NPS contribution under 80CCD(1B)."] },
+    { "tag": "tax_HRA", "patterns": ["hra exemption", "house rent allowance", "calculate HRA"], "responses": ["HRA exemption is the least of: actual HRA received, 50%/40% of salary based on city, or rent paid minus 10% of salary."] },
+    { "tag": "tax_LTA", "patterns": ["leave travel allowance", "LTA exemption"], "responses": ["LTA is exempt from tax for travel expenses incurred on leave within India, subject to limits."] },
+    { "tag": "tax_slabs_new", "patterns": ["new tax regime", "tax slab new"], "responses": ["New tax regime slabs for FY 2024-25: 0-3L (0%), 3-6L (5%), 6-9L (10%), 9-12L (15%), 12-15L (20%), above 15L (30%)."] },
+    { "tag": "tax_slabs_old", "patterns": ["old tax regime", "tax slab old"], "responses": ["Old tax regime allows multiple deductions (80C, 80D, etc.) with higher tax rates."] },
+    { "tag": "itr_filing", "patterns": ["how to file ITR", "itr filing"], "responses": ["You can file ITR online via the Income Tax e-filing portal using your PAN and bank details."] },
+    { "tag": "itr_due_dates", "patterns": ["itr due date", "filing deadline"], "responses": ["ITR filing deadlines for individuals are usually 31st July for FY 2024-25."] },
+    { "tag": "tax_refund", "patterns": ["tax refund", "get refund"], "responses": ["Refunds are processed after ITR verification, usually credited within a few weeks."] },
+    { "tag": "tds", "patterns": ["TDS", "tax deducted at source"], "responses": ["TDS is Tax Deducted at Source by the payer before making payments like salary, interest, rent, etc."] },
+    { "tag": "advance_tax", "patterns": ["advance tax", "pay tax in advance"], "responses": ["Advance tax is payable in installments if your tax liability exceeds ₹10,000 in a financial year."] },
+    { "tag": "tax_penalty", "patterns": ["tax penalty", "late filing penalty"], "responses": ["Penalty is levied for late filing or non-payment of taxes. Interest is charged under sections 234A, 234B, 234C."] },
+    { "tag": "tax_audit", "patterns": ["audit requirement", "tax audit"], "responses": ["Businesses and professionals exceeding specified turnover limits need to get accounts audited under section 44AB."] },
+    { "tag": "capital_gains", "patterns": ["capital gains", "sale of property", "tax on capital gain"], "responses": ["Capital gains tax is applicable on sale of assets. Short-term and long-term rates differ."] },
+    { "tag": "rental_income", "patterns": ["rent income", "property rent tax"], "responses": ["Rental income is taxable under 'Income from House Property'. Standard deduction of 30% is allowed."] },
+    { "tag": "business_income", "patterns": ["business income", "profit from business"], "responses": ["Business and professional income is taxed under 'Profits and gains from business or profession'."] },
+    { "tag": "salary_income", "patterns": ["salary income tax", "tax on salary"], "responses": ["Salary income is taxable under 'Income from Salaries' with exemptions like HRA, LTA."] },
+    { "tag": "freelance_income", "patterns": ["freelance tax", "professional fees tax"], "responses": ["Freelance or professional income is taxable under 'Profits and gains from business or profession'."] },
+    { "tag": "nri_tax", "patterns": ["NRI tax", "non resident tax", "NRI income tax"], "responses": ["NRIs are taxed only on income received or accrued in India."] },
+    { "tag": "tax_rebate_87A", "patterns": ["rebate under 87A", "tax rebate 87A"], "responses": ["Section 87A provides rebate up to ₹12,500 for individuals with taxable income up to ₹5 lakh."] },
+    { "tag": "tax_exemptions", "patterns": ["tax exemptions", "income exemptions"], "responses": ["Certain incomes like agricultural income, gifts below ₹50,000, and dividends are exempt from tax."] },
+    { "tag": "perquisites_tax", "patterns": ["perquisites", "fringe benefits", "tax on perks"], "responses": ["Perquisites such as rent-free accommodation, company car, or allowances are taxable under salary."] },
+    { "tag": "mutual_funds_tax", "patterns": ["mutual fund capital gains", "mf tax"], "responses": ["Long-term gains from equity funds are taxed at 10% beyond ₹1 lakh. Debt funds have different rules."] },
+    { "tag": "dividend_income", "patterns": ["dividend tax", "dividend income"], "responses": ["Dividend income from domestic companies is taxable in hands of shareholders at applicable rates."] },
+    { "tag": "pension_tax", "patterns": ["pension income tax", "retirement benefits tax"], "responses": ["Pension is taxable under 'Income from Salaries' or 'Other Sources' depending on type."] },
+    { "tag": "gift_tax", "patterns": ["gift tax", "tax on gifts"], "responses": ["Gifts received over ₹50,000 are taxable unless exempt under specified relations."] },
+    { "tag": "agriculture_income", "patterns": ["agriculture income", "tax on farming"], "responses": ["Agricultural income is exempt under Section 10(1) but may affect slab calculation for other income."] },
+    { "tag": "loan_interest_deduction", "patterns": ["home loan interest deduction", "tax on loan interest"], "responses": ["Interest on housing loan for self-occupied property is deductible under Section 24(b) up to ₹2 lakh."] },
+    { "tag": "rental_property_deduction", "patterns": ["rental property expenses", "house property deductions"], "responses": ["Standard deduction of 30% and interest on home loan are allowed for property income."] },
+    { "tag": "tax_form_16", "patterns": ["form 16", "TDS certificate"], "responses": ["Form 16 is issued by the employer and contains salary details and TDS deducted."] },
+    { "tag": "tax_form_26AS", "patterns": ["form 26AS", "tax credit statement"], "responses": ["Form 26AS shows all taxes deposited against your PAN including TDS, advance tax, and self-assessment tax."] },
+    { "tag": "tax_form_ITR1", "patterns": ["ITR1 form", "how to fill ITR1"], "responses": ["ITR1 is applicable for salaried individuals with income up to ₹50 lakh and no business income."] },
+    { "tag": "tax_form_ITR2", "patterns": ["ITR2 form", "how to fill ITR2"], "responses": ["ITR2 is for individuals and HUFs with income from sources other than business/profession."] },
+    { "tag": "tax_form_ITR3", "patterns": ["ITR3 form", "how to fill ITR3"], "responses": ["ITR3 is for individuals and HUFs having income from business or profession."] },
+    { "tag": "tax_form_ITR4", "patterns": ["ITR4 form", "how to fill ITR4"], "responses": ["ITR4 is for presumptive income scheme taxpayers."] },
+    { "tag": "tax_form_ITR5", "patterns": ["ITR5 form", "how to fill ITR5"], "responses": ["ITR5 is for firms, LLPs, AOPs, BOIs other than companies."] },
+    { "tag": "tax_form_ITR6", "patterns": ["ITR6 form", "how to fill ITR6"], "responses": ["ITR6 is for companies other than companies claiming exemption under section 11."] },
+    { "tag": "tax_form_ITR7", "patterns": ["ITR7 form", "how to fill ITR7"], "responses": ["ITR7 is for persons including companies required to furnish return under sections 139(4A), 139(4B), 139(4C), or 139(4D)."] },
+    { "tag": "fallback", "patterns": ["default fallback"], "responses": ["Sorry, I didn't understand that. Can you rephrase?", "I didn't get that — try asking differently."] },
+    
+    { "tag": "tax_exempt_allowances", "patterns": ["tax-free allowances", "allowances not taxable"], "responses": ["Certain allowances like conveyance, medical reimbursement (up to limits), and children education allowance are exempt from tax."] },
+    { "tag": "tax_professional_fees", "patterns": ["professional fees tax", "freelancer tax"], "responses": ["Income from professional services is taxable under 'Profits and gains of business or profession'."] },
+    { "tag": "tax_self_employment", "patterns": ["self-employment tax", "self-employed income tax"], "responses": ["Self-employed income is taxed under business/professional income, and advance tax may apply."] },
+    { "tag": "tax_surcharge", "patterns": ["surcharge on tax", "additional tax"], "responses": ["Surcharge is applicable for individuals with taxable income above ₹50 lakh, increasing the tax liability."] },
+    { "tag": "tax_cess", "patterns": ["health and education cess", "cess on tax"], "responses": ["A 4% Health and Education Cess is applied on the total tax amount."] },
+    { "tag": "tax_rebate", "patterns": ["tax rebate", "rebate eligibility"], "responses": ["Section 87A offers rebate to individuals with taxable income up to ₹5 lakh."] },
+    { "tag": "tax_interest_234A", "patterns": ["interest 234A", "late filing interest"], "responses": ["Interest under section 234A is levied for delay in filing ITR."] },
+    { "tag": "tax_interest_234B", "patterns": ["interest 234B", "interest on non-payment advance tax"], "responses": ["Interest under 234B is charged for non-payment or short payment of advance tax."] },
+    { "tag": "tax_interest_234C", "patterns": ["interest 234C", "installment interest"], "responses": ["Interest under 234C is for deferment or late payment of advance tax installments."] },
+    { "tag": "tax_investment_deduction", "patterns": ["investment tax deduction", "deduction for investments"], "responses": ["Investments under 80C, 80CCC, 80CCD can reduce taxable income."] },
+    { "tag": "tax_fixed_deposit", "patterns": ["FD interest tax", "fixed deposit tax"], "responses": ["Interest earned on fixed deposits is taxable under 'Income from Other Sources'."] },
+    { "tag": "tax_senior_citizen", "patterns": ["senior citizen tax", "tax rules for senior citizens"], "responses": ["Senior citizens have higher exemption limits and can claim 80TTB deduction on deposit interest."] },
+    { "tag": "tax_nps", "patterns": ["NPS deduction", "National Pension System tax"], "responses": ["Investments in NPS offer deductions under 80CCD(1) and 80CCD(1B)."] },
+    { "tag": "tax_stock_gains", "patterns": ["stock market gains tax", "shares capital gains"], "responses": ["Equity short-term gains taxed at 15%, long-term gains over ₹1 lakh taxed at 10%."] },
+    { "tag": "tax_debt_fund", "patterns": ["debt mutual fund tax", "non-equity fund gains"], "responses": ["Short-term gains taxed as per slab, long-term gains above ₹1 lakh taxed at 20% with indexation."] },
+    { "tag": "tax_bonds", "patterns": ["tax saving bonds", "interest on bonds"], "responses": ["Interest from certain bonds may be exempt under section 10 or taxable as per slab."] },
+    { "tag": "tax_salary_bonus", "patterns": ["bonus tax", "salary bonus tax"], "responses": ["Bonuses are taxed as part of salary income."] },
+    { "tag": "tax_gratuity", "patterns": ["gratuity tax", "retirement gratuity"], "responses": ["Gratuity received by government employees is fully exempt; non-government is partially exempt."] },
+    { "tag": "tax_leave_encashment", "patterns": ["leave encashment tax", "encashment of leave"], "responses": ["Leave encashment received during employment is taxable; on retirement, partially exempt."] },
+    { "tag": "tax_life_insurance", "patterns": ["life insurance maturity tax", "insurance policy tax"], "responses": ["Maturity proceeds of life insurance policies are tax-free under section 10(10D) subject to conditions."] },
+    { "tag": "tax_pension_funds", "patterns": ["pension fund tax", "NPS maturity tax"], "responses": ["NPS maturity is partly taxable on withdrawal; annuity purchased is taxable as pension income."] },
+    { "tag": "tax_rent_receipts", "patterns": ["rent receipt HRA", "proof for HRA"], "responses": ["Rent receipts are necessary to claim HRA exemption over ₹1 lakh."] },
+    { "tag": "tax_capital_loss", "patterns": ["capital loss", "loss on shares"], "responses": ["Short-term losses can be set off against short-term or long-term gains. Long-term losses only against long-term gains."] },
+    { "tag": "tax_setoff", "patterns": ["set off losses", "loss adjustment"], "responses": ["Losses can be set off in the same financial year or carried forward per IT rules."] },
+    { "tag": "tax_carry_forward", "patterns": ["carry forward losses", "loss carry forward"], "responses": ["Certain losses like business or capital loss can be carried forward for 8 years to adjust against future income."] },
+    { "tag": "tax_perquisite_house", "patterns": ["perquisite housing", "company accommodation"], "responses": ["Rent-free accommodation perquisites are taxable based on salary and property value."] },
+    { "tag": "tax_company_car", "patterns": ["perquisite company car", "car benefit tax"], "responses": ["Company-provided car perquisite is taxable depending on personal use and type of car."] },
+    { "tag": "tax_stock_options", "patterns": ["ESOP tax", "employee stock options"], "responses": ["ESOPs are taxed as perquisite at exercise, and capital gains apply at sale."] },
+    { "tag": "tax_foreign_income", "patterns": ["foreign income tax", "NRI foreign income"], "responses": ["Global income is taxable for residents; only Indian-sourced income taxable for NRIs."] },
+    { "tag": "tax_double_taxation", "patterns": ["DTAA", "double taxation avoidance"], "responses": ["DTAA agreements avoid double taxation on foreign-sourced income."] },
+    { "tag": "tax_huf", "patterns": ["HUF income tax", "Hindu Undivided Family tax"], "responses": ["HUFs have separate PAN and are taxed independently under income tax rules."] },
+    { "tag": "tax_partner_firm", "patterns": ["partnership firm tax", "tax on firm income"], "responses": ["Partnership firm income is taxed in the hands of the firm; partners taxed only on salary/interest received."] },
+    { "tag": "tax_company_income", "patterns": ["company tax", "corporate income tax"], "responses": ["Companies are taxed at applicable corporate tax rates; domestic and foreign rules apply."] },
+    { "tag": "tax_charity_donation", "patterns": ["donation tax deduction", "charitable donation"], "responses": ["Donations to approved charitable institutions are deductible under 80G."] },
+    { "tag": "tax_relief_section89", "patterns": ["relief under 89", "salary arrears tax"], "responses": ["Section 89 provides relief for salary arrears or advance salary received in a financial year."] },
+    { "tag": "tax_professional_tax", "patterns": ["professional tax", "PT deduction"], "responses": ["Professional tax is deductible from salary as per state rules."] },
+    { "tag": "tax_stamp_duty", "patterns": ["stamp duty tax", "property registration tax"], "responses": ["Stamp duty is not income tax but may affect capital gains computation."] },
+    { "tag": "tax_gift_from_relative", "patterns": ["gift from family", "gift tax relatives"], "responses": ["Gifts from specified relatives are exempt from tax regardless of amount."] },
+    { "tag": "tax_gift_from_nonrelative", "patterns": ["gift from friend", "gift tax non-relative"], "responses": ["Gifts from non-relatives exceeding ₹50,000 are taxable as income from other sources."] },
+    { "tag": "tax_income_from_agriculture", "patterns": ["farming income", "agriculture tax"], "responses": ["Agricultural income is exempt but may be used for rate calculation for other income."] },
+    { "tag": "tax_income_from_salary", "patterns": ["salary computation", "salary tax calculation"], "responses": ["Salary income includes basic pay, allowances, perquisites, bonuses, and taxable reimbursements."] },
+    { "tag": "tax_income_from_business", "patterns": ["business profit tax", "profession income tax"], "responses": ["Business and professional income is computed after deducting allowable expenses."] },
+    { "tag": "tax_income_from_house", "patterns": ["house property income", "rental property tax"], "responses": ["Income from house property includes rent received minus standard deduction and home loan interest."] },
+    { "tag": "tax_income_from_capital", "patterns": ["capital gains computation", "sale of property gains"], "responses": ["Compute short-term or long-term capital gains based on asset type, holding period, and indexed cost."] },
+    { "tag": "tax_income_from_other_sources", "patterns": ["other sources income", "interest income tax"], "responses": ["Income like interest, winnings, or gifts not covered elsewhere is taxable under 'Income from Other Sources'."] },
+    { "tag": "tax_revised_estimate", "patterns": ["revised income estimate", "revised tax calculation"], "responses": ["Revised income or tax can be filed before the end of the financial year to adjust advance tax."] },
+    { "tag": "tax_self_assessment", "patterns": ["self assessment tax", "how to pay self-assessment"], "responses": ["Self-assessment tax is paid before filing ITR if advance tax is insufficient."] },
+    { "tag": "tax_advance_payment", "patterns": ["advance tax payment", "installment tax payment"], "responses": ["Advance tax is payable in installments for income not subject to TDS."] },
+    { "tag": "tax_tds_salary", "patterns": ["TDS on salary", "tax deducted at source"], "responses": ["Employers deduct TDS on salary based on applicable slab and declarations submitted."] },
+    { "tag": "tax_tds_rent", "patterns": ["TDS on rent", "rent payment TDS"], "responses": ["TDS is applicable on rent paid exceeding ₹2.4 lakh per annum to a resident landlord."] },
+    { "tag": "tax_tds_contract", "patterns": ["TDS on contract", "contractor tax deduction"], "responses": ["TDS is applicable on payments to contractors if exceeding threshold limits, typically 1% to 2% depending on nature."] },
+    { "tag": "tax_tds_dividend", "patterns": ["TDS on dividend", "dividend tax deduction"], "responses": ["Dividend income is subject to TDS at 10% for resident individuals exceeding ₹5,000 per year."] },
+    { "tag": "tax_filing_deadline", "patterns": ["ITR deadline", "last date to file tax"], "responses": ["For individuals, the usual ITR filing deadline is 31st July of the assessment year."] },
+    { "tag": "tax_penalty_late", "patterns": ["late filing penalty", "penalty for delay"], "responses": ["Penalty for late filing can be ₹5,000 or more depending on income and delay duration."] },
+    { "tag": "tax_interest_late_payment", "patterns": ["interest on late payment", "late tax payment charges"], "responses": ["Interest under 234A, 234B, and 234C may apply on delayed payment of taxes."] },
+    
+    { "tag": "tax_income_from_freelancing", "patterns": ["freelance income tax", "independent contractor tax"], "responses": ["Income from freelancing is taxable under 'Profits and gains of business or profession'."] },
+    { "tag": "tax_income_from_rental_property", "patterns": ["rent income tax", "property income"], "responses": ["Rental income is taxable after deducting municipal taxes and standard deduction of 30%."] },
+    { "tag": "tax_home_loan_interest", "patterns": ["home loan interest deduction", "section 24"], "responses": ["Interest paid on home loan for self-occupied property is deductible up to ₹2 lakh per year under section 24(b)."] },
+    { "tag": "tax_home_loan_principal", "patterns": ["principal repayment 80C", "home loan principal deduction"], "responses": ["Principal repayment of home loan qualifies for deduction under section 80C up to ₹1.5 lakh."] },
+    { "tag": "tax_rural_development", "patterns": ["agriculture income tax", "farm income"], "responses": ["Agricultural income is exempt under section 10(1) but may be used to compute tax on other income."] },
+    { "tag": "tax_investment_in_nsc", "patterns": ["NSC investment deduction", "National Savings Certificate tax"], "responses": ["Investments in NSC qualify for deduction under section 80C."] },
+    { "tag": "tax_investment_in_elss", "patterns": ["ELSS tax deduction", "equity linked savings scheme"], "responses": ["ELSS investment qualifies for 80C deduction and has a lock-in period of 3 years."] },
+    { "tag": "tax_investment_in_ppf", "patterns": ["PPF tax deduction", "Public Provident Fund"], "responses": ["PPF contributions qualify for 80C deduction and interest earned is tax-free."] },
+    { "tag": "tax_investment_in_sukanya_samriddhi", "patterns": ["SSY deduction", "sukanya samriddhi scheme"], "responses": ["Investments in Sukanya Samriddhi Yojana qualify for 80C deduction and interest is tax-free."] },
+    { "tag": "tax_investment_in_tax_saving_fd", "patterns": ["tax saving fixed deposit", "FD deduction"], "responses": ["Tax-saving FDs have a 5-year lock-in and qualify for 80C deduction."] },
+    { "tag": "tax_investment_in_nps_additional", "patterns": ["NPS extra deduction", "80CCD(1B)"], "responses": ["Additional deduction of ₹50,000 is allowed under 80CCD(1B) for NPS contributions."] },
+    { "tag": "tax_medical_insurance_80d", "patterns": ["health insurance deduction", "section 80D"], "responses": ["Premium paid for health insurance qualifies for deduction under section 80D, limits depend on age."] },
+    { "tag": "tax_education_loan_80e", "patterns": ["education loan deduction", "section 80E"], "responses": ["Interest on education loans is deductible under section 80E for up to 8 years or until interest is paid."] },
+    { "tag": "tax_savings_for_disabled", "patterns": ["deduction for disability", "80U section"], "responses": ["Disabled individuals can claim deduction under section 80U depending on disability severity."] },
+    { "tag": "tax_savings_for_parents", "patterns": ["parents medical deduction", "80D parent insurance"], "responses": ["Insurance premiums for parents can also be claimed under 80D subject to age-based limits."] },
+    { "tag": "tax_interest_on_savings_account", "patterns": ["saving account interest tax", "80TTA"], "responses": ["Interest up to ₹10,000 on savings accounts is deductible under section 80TTA for non-senior citizens."] },
+    { "tag": "tax_interest_on_senior_savings", "patterns": ["interest 80TTB", "senior savings interest"], "responses": ["Senior citizens can claim deduction up to ₹50,000 under section 80TTB on interest income."] },
+    { "tag": "tax_donation_to_political_party", "patterns": ["political donation deduction", "section 80GGB"], "responses": ["Donations to political parties are deductible under section 80GGB."] },
+    { "tag": "tax_donation_to_local_party", "patterns": ["local political donation 80GGC", "section 80GGC"], "responses": ["Donations by individuals to local parties can be claimed under section 80GGC."] },
+    { "tag": "tax_interest_on_epf", "patterns": ["EPF interest tax", "Employees Provident Fund"], "responses": ["EPF interest earned is tax-free if contribution continues for 5 years or more."] },
+    { "tag": "tax_bonus_in_kind", "patterns": ["bonus in kind tax", "perquisite bonus"], "responses": ["Non-cash bonuses are taxable as perquisite at fair market value."] },
+    { "tag": "tax_employee_stock_purchase", "patterns": ["ESPP tax", "employee stock purchase plan"], "responses": ["Tax on discounted stock purchase is levied as perquisite at exercise and capital gain at sale."] },
+    { "tag": "tax_inflation_indexation", "patterns": ["capital gain indexation", "CII use"], "responses": ["Long-term capital gains can be calculated using cost inflation index for asset purchase and sale years."] },
+    { "tag": "tax_short_term_capital_gain", "patterns": ["STCG tax", "short term gain"], "responses": ["Short-term capital gains on equity and non-equity assets are taxed differently; equity 15%, debt as per slab."] },
+    { "tag": "tax_long_term_capital_gain", "patterns": ["LTCG tax", "long term gain"], "responses": ["Long-term capital gains over ₹1 lakh from equity are taxed at 10%, debt gains with indexation at 20%."] },
+    { "tag": "tax_surcharge_high_income", "patterns": ["high income surcharge", "income above crore"], "responses": ["Surcharge rates vary from 10% to 37% for income exceeding ₹50 lakh to ₹5 crore+."] },
+    { "tag": "tax_resident_status", "patterns": ["resident tax status", "NRI tax"], "responses": ["Resident status depends on days spent in India; it affects taxable global income."] },
+    { "tag": "tax_income_from_agri_investments", "patterns": ["agricultural investment deduction", "farm capital gains"], "responses": ["Investments in agriculture equipment or property may qualify for certain exemptions under IT rules."] },
+    { "tag": "tax_section_80ccg", "patterns": ["Rajiv Gandhi equity deduction", "section 80CCG"], "responses": ["Section 80CCG (if applicable) allowed deduction for investments in specified equity schemes."] },
+    { "tag": "tax_rebate_for_filers", "patterns": ["tax rebate ITR", "section 87A eligibility"], "responses": ["Rebate under section 87A reduces tax liability for individuals with taxable income up to ₹5 lakh."] },
+    { "tag": "tax_advance_tax_penalty", "patterns": ["advance tax penalty", "interest on late payment"], "responses": ["Interest under 234B and 234C is levied for non-payment or deferment of advance tax."] },
+    { "tag": "tax_form_16", "patterns": ["Form 16 download", "salary TDS certificate"], "responses": ["Form 16 is issued by the employer showing TDS on salary; essential for filing ITR."] },
+    { "tag": "tax_form_26AS", "patterns": ["Form 26AS download", "TDS statement"], "responses": ["Form 26AS shows all tax deducted, advance tax, and refund credits for a PAN."] },
+    { "tag": "tax_ITR1", "patterns": ["ITR1 form", "salaried ITR"], "responses": ["ITR-1 (Sahaj) is for salaried and pension income earners with simple income sources."] },
+    { "tag": "tax_ITR2", "patterns": ["ITR2 form", "non-business ITR"], "responses": ["ITR-2 is for individuals and HUFs with income from salary, house property, capital gains, and other sources but no business income."] },
+    { "tag": "tax_ITR3", "patterns": ["ITR3 form", "business income ITR"], "responses": ["ITR-3 is for individuals and HUFs having income from business or profession."] },
+    { "tag": "tax_ITR4", "patterns": ["ITR4 form", "presumptive income"], "responses": ["ITR-4 (Sugam) is for individuals, HUFs, and firms opting for presumptive taxation."] },
+    { "tag": "tax_ITR5", "patterns": ["ITR5 form", "firm ITR"], "responses": ["ITR-5 is for partnership firms, LLPs, Association of Persons (AOPs), and others except companies."] },
+    { "tag": "tax_ITR6", "patterns": ["ITR6 form", "company ITR"], "responses": ["ITR-6 is for companies other than those claiming exemption under section 11."] },
+    { "tag": "tax_ITR7", "patterns": ["ITR7 form", "charitable ITR"], "responses": ["ITR-7 is for persons including companies required to furnish return under sections 139(4A), 139(4B), 139(4C), or 139(4D)."] },
+    { "tag": "tax_form_submission_online", "patterns": ["efile ITR", "submit online tax"], "responses": ["Income tax returns can be submitted online via the e-filing portal using DSC or Aadhaar OTP."] },
+    
+  {
+    "tag": "lottery_income",
+    "patterns": [
+      "tax on lottery winnings",
+      "winning lottery how much tax",
+      "lottery prize tax",
+      "lottery income tax slab",
+      "do I pay tax on lottery"
+    ],
+    "responses": [
+      "Lottery winnings are taxed at a flat 30% under the Income Tax Act. No deduction is allowed."
+    ]
+  },
+  {
+    "tag": "crypto_income",
+    "patterns": [
+      "tax on cryptocurrency",
+      "bitcoin income tax",
+      "crypto trading tax",
+      "digital assets tax",
+      "how is crypto taxed"
+    ],
+    "responses": [
+      "Income from cryptocurrency is taxed as capital gains or business income depending on trading frequency. Short-term gains are taxed at your slab rate, long-term gains at 20% with indexation."
+    ]
+  },
+  {
+    "tag": "capital_gains_property",
+    "patterns": [
+      "capital gains on property sale",
+      "selling house tax",
+      "property gain tax",
+      "tax on land sale",
+      "real estate capital gains"
+    ],
+    "responses": [
+      "Long-term capital gains on property held over 2 years are taxed at 20% with indexation. Short-term gains are added to income and taxed at slab rates."
+    ]
+  },
+  {
+    "tag": "dividend_income",
+    "patterns": [
+      "dividend income tax",
+      "tax on shares dividend",
+      "mutual fund dividend tax",
+      "dividend received tax",
+      "stock dividend taxation"
+    ],
+    "responses": [
+      "Dividends from companies are taxable in your hands at applicable slab rates. Earlier DDT was exempt, but now it's included in total income."
+    ]
+  },
+  {
+    "tag": "gifts_tax",
+    "patterns": [
+      "gift tax",
+      "tax on gift received",
+      "receiving gifts",
+      "gifts above 50000",
+      "do I pay tax on gifts"
+    ],
+    "responses": [
+      "Gifts exceeding ₹50,000 from non-relatives are taxable as income under 'Income from Other Sources'."
+    ]
+  },
+  {
+    "tag": "itr_due_dates",
+    "patterns": [
+      "ITR filing last date",
+      "when to file income tax return",
+      "due date ITR",
+      "late filing deadline",
+      "income tax return due"
+    ],
+    "responses": [
+      "For individuals, the due date for filing ITR is generally 31st July of the assessment year. Extensions may be announced by the Income Tax Department."
+    ]
+  },
+  {
+    "tag": "itr_revision",
+    "patterns": [
+      "how to revise ITR",
+      "correct mistake in ITR",
+      "ITR rectification",
+      "amend filed ITR",
+      "modify income tax return"
+    ],
+    "responses": [
+      "You can revise your ITR using the 'Revised ITR' option on the e-filing portal before the end of the assessment year."
+    ]
+  },
+  {
+    "tag": "tds_salary",
+    "patterns": [
+      "TDS on salary",
+      "tax deducted by employer",
+      "Form 16 TDS",
+      "salary tax deduction",
+      "how TDS works on salary"
+    ],
+    "responses": [
+      "Your employer deducts TDS from salary based on your declared investments and applicable tax slab. You receive Form 16 as proof."
+    ]
+  },
+  {
+    "tag": "tds_rent",
+    "patterns": [
+      "TDS on rent",
+      "rent payment tax",
+      "tenant TDS",
+      "how to deduct TDS on rent",
+      "form 26QC"
+    ],
+    "responses": [
+      "TDS on rent is required if rent exceeds ₹2.4 lakh per year. The tenant must deduct 10% and deposit it using Form 26QC."
+    ]
+  },
+  {
+    "tag": "tds_interest",
+    "patterns": [
+      "TDS on bank interest",
+      "interest income tax",
+      "fixed deposit TDS",
+      "FD interest tax",
+      "bank TDS rules"
+    ],
+    "responses": [
+      "Banks deduct TDS at 10% on interest exceeding ₹40,000 per year (₹50,000 for senior citizens). You can claim it while filing your ITR."
+    ]
+  },
+  {
+    "tag": "pan_queries",
+    "patterns": [
+      "what is PAN",
+      "apply PAN",
+      "PAN card info",
+      "PAN number check",
+      "why PAN is needed"
+    ],
+    "responses": [
+      "PAN (Permanent Account Number) is required for filing ITR, opening bank accounts, and other financial transactions above certain limits."
+    ]
+  },
+  {
+    "tag": "aadhaar_linking",
+    "patterns": [
+      "link PAN with Aadhaar",
+      "Aadhaar PAN mandatory",
+      "how to link PAN",
+      "PAN-Aadhaar update",
+      "deadline for linking PAN Aadhaar"
+    ],
+    "responses": [
+      "Linking PAN with Aadhaar is mandatory for filing ITR. You can do it online via the Income Tax e-filing portal."
+    ]
+  },
+  {
+    "tag": "nri_taxation",
+    "patterns": [
+      "NRI tax rules",
+      "tax for non-resident",
+      "income tax for NRI",
+      "foreign income tax",
+      "NRI filing"
+    ],
+    "responses": [
+      "NRIs are taxed only on income earned or received in India. Global income is generally not taxed unless you are resident."
+    ]
+  },
+  {
+    "tag": "dtaa",
+    "patterns": [
+      "double tax avoidance",
+      "DTAA India",
+      "avoid double taxation",
+      "foreign tax relief",
+      "tax treaty"
+    ],
+    "responses": [
+      "DTAA helps prevent paying tax twice on the same income in two countries. You can claim credit of foreign tax paid."
+    ]
+  },
+  {
+    "tag": "retirement_tax",
+    "patterns": [
+      "pension taxable",
+      "gratuity tax",
+      "retirement benefits tax",
+      "EPF withdrawal tax",
+      "NPS taxation"
+    ],
+    "responses": [
+      "Retirement benefits like gratuity, pension, and EPF withdrawals are taxable depending on limits and exemptions under the Income Tax Act."
+    ]
+  },
+  {
+    "tag": "tax_planning",
+    "patterns": [
+      "how to plan tax",
+      "tax saving tips",
+      "investment for tax saving",
+      "optimize tax",
+      "reduce income tax legally"
+    ],
+    "responses": [
+      "Tax planning involves using deductions, exemptions, and investment options wisely to minimize your tax liability within the law."
+    ]
+  },
+  {
+    "tag": "salary_breakup",
+    "patterns": [
+      "salary components",
+      "basic HRA PF",
+      "gross to net salary",
+      "taxable salary calculation",
+      "salary structure tax"
+    ],
+    "responses": [
+      "Salary breakup affects taxable income. Components like basic, HRA, allowances, and deductions determine your tax liability."
+    ]
+  },
+  {
+    "tag": "foreign_income",
+    "patterns": [
+      "foreign salary tax",
+      "overseas income tax",
+      "foreign investment tax",
+      "remittance tax",
+      "foreign bank income"
+    ],
+    "responses": [
+      "Foreign income is taxable for residents but not for non-residents. You may claim foreign tax credit if DTAA applies."
+    ]
+  },
+  {
+    "tag": "fallback_final",
+    "patterns": [
+      "default fallback",
+      "I don't know",
+      "help",
+      "unknown query",
+      "can't answer"
+    ],
+    "responses": [
+      "Sorry, I didn't understand that. Can you rephrase?",
+      "I didn't get that — try asking in a different way.",
+      "Ask something related to income tax and I will try to answer."
+    ]
+  }
+  
+  ]
+}

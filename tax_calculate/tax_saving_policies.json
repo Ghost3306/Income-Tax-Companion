@@ -1,0 +1,82 @@
+{
+  "80C": {
+    "description": "Investments eligible for deduction under Section 80C.",
+    "limit": 150000,
+    "policies": [
+      "Public Provident Fund (PPF)",
+      "Equity Linked Savings Scheme (ELSS)",
+      "National Savings Certificate (NSC)",
+      "Sukanya Samriddhi Yojana (SSY)",
+      "Senior Citizens Savings Scheme (SCSS)",
+      "5-Year Tax-Saving Fixed Deposit",
+      "National Pension System (NPS) Tier-I",
+      "Tuition Fees for Children",
+      "Life Insurance Premium",
+      "Unit Linked Insurance Plan (ULIP)"
+    ]
+  },
+  "80D": {
+    "description": "Deductions for premiums paid on health insurance policies.",
+    "limit": 25000,
+    "policies": [
+      "Health Insurance for Self/Family",
+      "Health Insurance for Parents",
+      "Preventive Health Check-up",
+      "Critical Illness Plan",
+      "Top-Up Health Insurance",
+      "Hospital Daily Cash Plan",
+      "Personal Accident Insurance",
+      "Maternity Health Insurance",
+      "Senior Citizen Health Plan",
+      "Family Floater Health Plan"
+    ]
+  },
+  "80CCD(1B)": {
+    "description": "Additional deduction for contributions to the National Pension System (NPS).",
+    "limit": 50000,
+    "policies": [
+      "NPS Tier-I Account",
+      "Corporate NPS",
+      "Atal Pension Yojana (APY)",
+      "Government Employee NPS",
+      "Self-Employed NPS Contribution",
+      "Voluntary Contribution to NPS",
+      "NPS Swavalamban Scheme",
+      "Additional Tier-I NPS Contribution",
+      "NPS Auto Debit Investments",
+      "Employer Matched NPS Contribution"
+    ]
+  },
+  "80E": {
+    "description": "Deductions for interest on loans taken for higher education.",
+    "limit": "No limit",
+    "policies": [
+      "Education Loan for Higher Studies",
+      "Loan for Foreign Education",
+      "Loan for Vocational Courses",
+      "Loan for Professional Studies",
+      "Loan for MBA/PGDM",
+      "Loan for Technical Courses",
+      "Loan for Postgraduate Courses",
+      "Loan for PhD Studies",
+      "Student Loan Interest Payment",
+      "Loan for Specialized Certifications"
+    ]
+  },
+  "80G": {
+    "description": "Deductions for donations to charitable institutions.",
+    "limit": "50% or 100%",
+    "policies": [
+      "Prime Minister's National Relief Fund",
+      "Jawaharlal Nehru Memorial Fund",
+      "National Defence Fund",
+      "National Foundation for Communal Harmony",
+      "Chief Minister's Relief Fund",
+      "Donations to Charitable Trusts",
+      "Donations to Political Parties",
+      "Donations to Rural Development Funds",
+      "Clean India Fund",
+      "PM CARES Fund"
+    ]
+  }
+}

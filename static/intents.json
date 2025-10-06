@@ -1,0 +1,222 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "hi",
+        "hello",
+        "hey",
+        "good morning",
+        "good afternoon",
+        "good evening",
+        "hiya",
+        "hey there",
+        "what's up",
+        "howdy",
+        "hello there",
+        "greetings"
+      ],
+      "responses": [
+        "Hello! How can I help you today?",
+        "Hi there — what can I do for you?",
+        "Hey! Ask me anything."
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "bye",
+        "goodbye",
+        "see you",
+        "see ya",
+        "talk later",
+        "catch you later",
+        "i'm off",
+        "farewell"
+      ],
+      "responses": [
+        "Goodbye! Have a great day.",
+        "See you later — feel free to come back anytime.",
+        "Bye! Happy to help anytime."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "thanks",
+        "thank you",
+        "thx",
+        "cheers",
+        "much appreciated",
+        "thanks a lot"
+      ],
+      "responses": [
+        "You're welcome!",
+        "No problem, glad to help.",
+        "Anytime — happy to help!"
+      ]
+    },
+    {
+      "tag": "about_bot",
+      "patterns": [
+        "who are you",
+        "what are you",
+        "are you a bot",
+        "tell me about yourself",
+        "what can you do",
+        "capabilities",
+        "what do you help with"
+      ],
+      "responses": [
+        "I'm a lightweight chatbot API. I can answer questions from a set of intents, correct small spelling mistakes, and log chats to sessions.",
+        "I am a Django chatbot API — send me a query and I'll reply with the best matching answer."
+      ]
+    },
+    {
+      "tag": "hours",
+      "patterns": [
+        "what are your hours",
+        "are you open now",
+        "working hours",
+        "business hours",
+        "when are you open",
+        "open time"
+      ],
+      "responses": [
+        "We're available 24/7 online.",
+        "You can message me any time — I'm here 24/7."
+      ]
+    },
+    {
+      "tag": "location",
+      "patterns": [
+        "where are you located",
+        "your location",
+        "where is your office",
+        "address",
+        "office location",
+        "which city are you in"
+      ],
+      "responses": [
+        "I'm hosted in the cloud — no fixed physical office.",
+        "I don't have a physical office; I'm available via API."
+      ]
+    },
+    {
+      "tag": "help",
+      "patterns": [
+        "i need help",
+        "help me",
+        "can you help me",
+        "need assistance",
+        "support",
+        "how to use this"
+      ],
+      "responses": [
+        "Sure — tell me what you need help with.",
+        "Explain your issue and I'll try to assist."
+      ]
+    },
+    {
+      "tag": "book_order",
+      "patterns": [
+        "i want to place an order",
+        "order a book",
+        "buy a product",
+        "purchase",
+        "place an order",
+        "how to order",
+        "i want to buy"
+      ],
+      "responses": [
+        "To place an order, tell me the item and quantity.",
+        "I can help you order — what do you want to buy?"
+      ]
+    },
+    {
+      "tag": "refund_policy",
+      "patterns": [
+        "what is your refund policy",
+        "refunds",
+        "how to get refund",
+        "i want a refund",
+        "return policy",
+        "returns"
+      ],
+      "responses": [
+        "Refunds are processed within 5–7 business days once approved.",
+        "You can request a refund within 14 days of purchase."
+      ]
+    },
+    {
+      "tag": "smalltalk_weather",
+      "patterns": [
+        "what's the weather",
+        "weather today",
+        "is it raining",
+        "will it be sunny",
+        "how's the weather",
+        "temperature"
+      ],
+      "responses": [
+        "I don't have live weather in this demo — but I can show you how to connect a weather API.",
+        "For live weather I can integrate with a weather API. Ask me to show how."
+      ]
+    },
+    {
+      "tag": "tech_support",
+      "patterns": [
+        "my app crashed",
+        "i have an error",
+        "bug in app",
+        "technical problem",
+        "site not loading",
+        "server error",
+        "fix this bug"
+      ],
+      "responses": [
+        "Describe the error message and I will try to guide you through debugging steps.",
+        "Provide logs or the error trace and I can suggest fixes."
+      ]
+    },
+    {
+      "tag": "password_reset",
+      "patterns": [
+        "forgot my password",
+        "reset password",
+        "i can't login",
+        "change password",
+        "password help",
+        "recover account"
+      ],
+      "responses": [
+        "To reset your password, use the 'Forgot password' link or contact support.",
+        "I can generate a reset link flow example, would you like that?"
+      ]
+    },
+    {
+      "tag": "joke",
+      "patterns": [
+        "tell me a joke",
+        "make me laugh",
+        "do you know any jokes",
+        "funny",
+        "say something funny"
+      ],
+      "responses": [
+        "Why did the developer go broke? Because he used up all his cache.",
+        "I would tell you a UDP joke but you might not get it."
+      ]
+    },
+    {
+      "tag": "fallback",
+      "patterns": [
+        "default fallback"
+      ],
+      "responses": [
+        "Sorry, I didn't understand that. Can you rephrase?",
+        "I didn't get that — try asking in a different way."
+      ]
+    }
+  ]
+}

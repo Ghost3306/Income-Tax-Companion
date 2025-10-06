@@ -35,3 +35,29 @@ class TaxCalculation(models.Model):
 
     def __str__(self):
         return f"TaxCalculation({self.user}, {self.taxpayer_type}, {self.gross_income})"
+from django.db import models
+
+class ChatSession(models.Model):
+    session_id = models.CharField(max_length=128, unique=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+class ChatLog(models.Model):
+    session = models.ForeignKey(ChatSession, on_delete=models.CASCADE, related_name="logs")
+    user_message = models.TextField()
+    bot_response = models.TextField()
+    intent = models.CharField(max_length=64, null=True, blank=True)
+    confidence = models.FloatField(default=0.0)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+from django.db import models
+import uuid
+class FAQ(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    question = models.TextField()
+    answer = models.TextField(blank=True, null=True)  # will be filled later
+    category = models.CharField(max_length=100, blank=True, null=True)
+    email = models.TextField(blank=True, null=True)  # now fully safe as plain text
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    def __str__(self):
+        return self.question[:50]
